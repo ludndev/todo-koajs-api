@@ -2,11 +2,11 @@
   "name": "todo-koajs-api",
   "description": "Todo List Backend built with KoaJs",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha tests/**/*.js",
-    "start": "node main.js",
-    "dev": "nodemon main.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "ludndev",
   "license": "MIT",
