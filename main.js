@@ -21,5 +21,10 @@ app.use(bodyParser());
 app.use(defaultRoutes());
 app.use(todoRoutes());
 
+module.exports = app;
 
-app.listen(process.env.APP_PORT);
+if (require.main === module) {
+    // this code will only be executed if this module is being executed directly
+    console.log(`Starting ${process.env.APP_NAME} on port ${process.env.APP_PORT}`);
+    app.listen(process.env.APP_PORT);
+}
