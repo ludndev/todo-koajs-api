@@ -53,7 +53,7 @@ controller.update = async (ctx) => {
             ctx.body = { message: 'Todo not found' };
         } else {
             ctx.status = 200;
-            ctx.body = { todo };
+            ctx.body = { data: todo };
         }
     } catch (err) {
         console.error(err);
