@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/**/*.js",
     "dev": "nodemon main.js"
   },
   "author": "ludndev",
@@ -22,6 +22,9 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.0",
-    "nodemon": "^2.0.22"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
   }
 }
