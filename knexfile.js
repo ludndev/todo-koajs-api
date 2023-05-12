@@ -25,10 +25,11 @@ module.exports = {
       max: 10
     },
     migrations: {
+      directory: './database/migrations',
       tableName: 'knex_migrations'
     },
     seeds : {
-      directory: './seeds',
+      directory: './database/seeds',
     },
     ...knexSnakeCaseMappers()
   }
