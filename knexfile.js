@@ -1,3 +1,5 @@
+// noinspection SpellCheckingInspection
+
 const dotenv = require('dotenv');
 const { knexSnakeCaseMappers } = require('objection');
 
@@ -14,7 +16,9 @@ module.exports = {
       database: process.env["DATABASE_NAME"],
       host: process.env["DATABASE_HOST"],
       user: process.env["DATABASE_USER"],
-      password: process.env["DATABASE_PASS"]
+      password: process.env["DATABASE_PASS"],
+      ssl: process.env["DATABASE_SSL"] === "true",
+      sslmode: process.env["DATABASE_SSL"] === "true" ? 'require' : undefined
     },
     pool: {
       min: 2,
