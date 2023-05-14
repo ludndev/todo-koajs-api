@@ -56,4 +56,4 @@ jobs:
     - name: Migrate and seed database
       run: npm run knex
     - name: Run test
-      run: npm test
+      run: npm run test
