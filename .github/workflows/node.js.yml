@@ -9,6 +9,17 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  APP_NAME: "todo-koajs-api"
+  APP_HOST: "0.0.0.0"
+  APP_PORT: "3000"
+  DATABASE_NAME: "todo"
+  DATABASE_USER: "postgres"
+  DATABASE_PASS: "postgres_password"
+  DATABASE_HOST: "0.0.0.0"
+  DATABASE_PORT: "5432"
+  DATABASE_SSL: "false"
+
 jobs:
   build:
     runs-on: ubuntu-latest
