@@ -28,6 +28,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_DB: "${{ env.DATABASE_NAME }}"
+          POSTGRES_PORT: "${{ env.DATABASE_PORT }}"
           POSTGRES_USER: "${{ env.DATABASE_USER }}"
           POSTGRES_PASSWORD: "${{ env.DATABASE_NAME }}"
           INPUT_POSTGRESQL_VERSION: 14
