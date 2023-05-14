@@ -23,6 +23,20 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_DB: "${{ env.DATABASE_NAME }}"
+          POSTGRES_USER: "${{ env.DATABASE_USER }}"
+          POSTGRES_PASSWORD: "${{ env.DATABASE_NAME }}"
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     strategy:
       matrix:
         node-version: [18.x]
