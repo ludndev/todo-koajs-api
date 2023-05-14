@@ -30,6 +30,7 @@ jobs:
           POSTGRES_DB: "${{ env.DATABASE_NAME }}"
           POSTGRES_USER: "${{ env.DATABASE_USER }}"
           POSTGRES_PASSWORD: "${{ env.DATABASE_NAME }}"
+          INPUT_POSTGRESQL_VERSION: 14
         ports:
           - 5432:5432
         options: >-
